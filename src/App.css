@@ -36,6 +36,10 @@ font-family: monospace;
   padding: 1rem;
   height: 40vh;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+
+  /* align-items: flex-end; */
 
 }
 body::-webkit-scrollbar {
@@ -52,6 +56,20 @@ body::-webkit-scrollbar {
   color: var(--text-color);
   cursor: pointer;
 
+}
+.file_clear_btn{
+  padding: 0.4rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--secondary-bg);
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-family: monospace;
+  margin-bottom: 10px;
+  display: block;
+  cursor: pointer;
+  width: fit-content;
+  align-self: flex-end;
 }
 #select_files{
   display: none;
@@ -88,4 +106,9 @@ body::-webkit-scrollbar {
   color: var(--text-color);
   font-size: 1.2rem;
 
+}
+.video_name{
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin: 18px 0;
 }

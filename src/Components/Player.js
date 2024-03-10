@@ -23,9 +23,10 @@ const Player = ({ videoJsOptions, handlePlayerReady, currentVideo }) => {
                     id='invert_strength'
                 />
             </div>
-            {currentVideo.url !== '' && (
+            {currentVideo.url && (
                 <div className='player_container'>
                     <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+                    <p className='video_name'>{currentVideo.name}</p>
                 </div>
             )}
         </>

@@ -9,7 +9,7 @@ import NavBar from './Components/NavBar';
 
 function App() {
   const [files, setFiles] = useState([]);
-  const [currentVideo, setCurrentVideo] = useState({ url: '', type: '' })
+  const [currentVideo, setCurrentVideo] = useState({})
 
 
   const onChange = event => {
@@ -48,7 +48,7 @@ function App() {
     });
   };
 
-
+  console.log(files, currentVideo)
 
   return (
     <>
@@ -56,7 +56,7 @@ function App() {
       <div className="App">
         <FileSelector onChange={onChange} />
         <Player videoJsOptions={videoJsOptions} handlePlayerReady={handlePlayerReady} currentVideo={currentVideo} />
-        <FileList files={files} setCurrentVideo={setCurrentVideo} />
+        <FileList setFiles={setFiles} currentVideo={currentVideo} files={files} setCurrentVideo={setCurrentVideo} />
       </div>
     </>);
 }
